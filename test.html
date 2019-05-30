@@ -3,11 +3,41 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <title></title>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script src="vendor/coffee-script.js"></script>
     <script type="text/coffeescript" src="youtube-video.coffee"></script>
-    <script type="text/coffeescript" src="test.coffee"></script>
+    <!--<script type="text/coffeescript" src="test.coffee"></script>-->
   </head>
   <body>
+    <script>
+      function getIdFromVideo(url){
+        if(url.includes("://")){
+          var jsoon = YoutubeVideo.decodeQueryString("https://www.youtube.com/watch?v=EVBsypHzF3U&list=RDEVBsypHzF3U&start_radio=1");
+          for(var i in jsoon){
+            return jsoon[i];
+          }
+        }else{
+          return url;
+        }
+      }
+     
+      window.onload = function(){
+        var youtubeId = "YyZ6CIN3Qlk";
+        console.log('ree')
+         console.log(getIdFromVideo("https://www.youtube.com/watch?v=EVBsypHzF3U&list=RDEVBsypHzF3U&start_radio=1"));
+        console.log(YoutubeVideo.decodeQueryString("https://www.youtube.com/watch?v=EVBsypHzF3U&list=RDEVBsypHzF3U&start_radio=1"));
+        YoutubeVideo(youtubeId, function(video){
+          console.log(video);
+          console.log(video.title);
+          var webm = video.getSource("video/webm", "medium");
+          console.log("WebM: " + webm.url);
+          var mp4 = video.getSource("video/mp4", "medium");
+          console.log("MP4: " + mp4.url);
+          // var mp3 = video.getSource("video/mp3", "medium");
+          // console.log("MP3: " + mp3.url);
+          $("<video controls='controls'/>").attr("src", webm.url).appendTo("body");
+        });
+      }
+    </script>
   </body>
 </html>

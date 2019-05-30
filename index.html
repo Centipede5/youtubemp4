@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Youtube mp4 is the best youtube to mp4 free converter. Convert youtube videos for free to mp4 and webm formats">
+      <meta name="keywords" content="YouTube, Converter, Fast, Convert YouTube to Mp4, Youtube mp4 free converter, Videos to Mp4, YouTube to WEBM" />
+      <meta name="author" content="Centipede5">
+      <meta property="og:url" content="https://youtube-mp4.club/" />
+      <meta property="og:image" content="https://youtube-mp4.club/cover.png" />
+	    <meta property="og:image:width" content="480" />
+	    <meta property="og:image:height" content="246" />
+	    <meta property="og:type" content="website" />
+      <title>Convert Youtube to Mp4 fast online</title>
+      <link rel="alternate" href="https://youtube-mp4.club/" hreflang="en" />
+      <link rel="alternate" href="https://youtube-mp4.club/" hreflang="x-default" />
+      
+      <link rel="stylesheet" media="all" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" media="all" href="https://www.w3schools.com/lib/w3-theme-dark-grey.css">
+      <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141034412-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-141034412-1');
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" async></script>
+   </head>
+   <body class="w3-theme-d3">
+      <script src = "youtube-video.js" defer="defer" async></script>
+      <script src = "download.js" defer="defer" async></script>
+      <script src="main.js" defer="defer" async></script>
+      <div class="w3-top w3-lightgray">
+         <div class="w3-bar w3-lightgray w3-card">
+            <a href="/" class="w3-bar-item w3-button w3-padding-large">CONVERT</a>
+            <a href="/about.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+            <a href="/terms.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TERMS</a>
+            <a href="mailto:centipede5dev@gmail.com" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+         </div>
+      </div>
+      <div class = "w3-center" style ="margin-top:40px;">
+         <header class="w3-container w3-theme w3-padding" id="myHeader">
+            <div class="w3-center">
+               <h1 class="w3-xxxlarge">Convert Youtube to MP4</h1>
+               <h5 class="">Youtube to mp4 free converter online</h5>
+            </div>
+         </header>
+         <div class="w3-container w3-card-4 w3-light-grey w3-theme w3-margin w3-round">
+            <!--<i style = "font-size:25px;">(e.g. https://www.youtube.com/watch?v=_LBmUwi6mEo)</i>-->
+            <h2 class="w3-center">Youtube Video URL</h2>
+            <div class="w3-row w3-section">
+               <div class="w3-col" style="width:50px"><i class="w3-xlarge"></i></div>
+               <div class="w3-rest">
+                  <input class="w3-input w3-border" id="videourl" type="text" placeholder="Paste Link Here (e.g. https://www.youtube.com/watch?v=_LBmUwi6mEo)" style="width:60%;margin-left:20%;">
+                  <button onclick = "document.getElementById('id01').style.display='block';window.convert();" class="w3-button w3-section w3-red w3-ripple w3-round w3-half" style="width:60%;margin-left:20%;"> CONVERT ></button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--modal-->
+      <div id="id01" class="w3-modal w3-center">
+         <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+            <div class="w3-center"><br>
+               <span onclick="document.getElementById('id01').style.display='none';window.quitFromModal();" class="w3-button w3-white w3-xlarge w3-transparent w3-display-topright" title="Cancel">x</span>
+            </div>
+            <form class="w3-container">
+               <h3 id = "hc" class = "w3-white">Converting your video</h3>
+               <div id= "video-content" class="w3-section">
+                  <img id="loaderimg" src="loading.svg" width:"100" height:"100">
+                  <img id="errorimg" src="error.png" width:"100" height:"100" style="display:none;">
+               </div>
+               <div id="whileloading" class ="w3-white w3-padding">
+                  <div class ="w3-animate-opacity">Finding your video</div>
+               </div>
+               <div id="downloadprogress" class ="w3-padding" style = "display:none;">
+                  <div class="w3-light-grey w3-xlarge">
+                     <div id="progress" class="w3-container w3-green" style="width:0%">0%</div>
+                  </div>
+               </div>
+               <div id="done" style = "display:none" class ="w3-animate-opacity w3-white">
+               </div>
+            </form>
+         </div>
+      </div>
+      <footer class="w3-container w3-center w3-theme w3-xlarge" style ="position:fixed;bottom:0px">
+         <a href = "https://www.facebook.com/sharer/sharer.php?u=https://ioplay.ga" class="w3-opacity fa fa-facebook-official w3-hover-opacity"></a>
+         <a href = "https://twitter.com/intent/tweet?text=Fastest Youtube to Mp4 converter online! https://ioplay.ga&&hashtags=YoutubeConverter,mp4" class="w3-opacity fa fa-twitter w3-hover-opacity"></a>
+         <a href = "https://discord.gg/uu5ram8" class="w3-opacity w3-hover-opacity">Discord</a>
+         <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-          button-rendered" style="position: static; scale:0.7;visibility: visible; width: 70px; height: 25px;padding-top:5px;" title="Twitter Follow Button" src="https://platform.twitter.com/widgets/follow_button.1025be460f33762a866ea882e1687ff4.en.html#dnt=false&amp;id=twitter-widget-          0&amp;lang=en&amp;screen_name=Centipede5dev&amp;show_count=false&amp;show_screen_name=false&amp;size=m&amp;time=1534786857935" data="" -screen-name="Centipede5dev"></iframe>
+      </footer>
+   </body>
+</html>

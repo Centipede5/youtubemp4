@@ -1,6 +1,6 @@
 window.YoutubeVideo = (id, callback) ->
   $.ajax(
-    url: "http://www.youtube.com/get_video_info?video_id=#{id}"
+    url: "https://rich-collard.glitch.me/https://www.youtube.com/get_video_info?video_id=#{id}"
     dataType: "text"
   ).done (video_info) ->
     video = YoutubeVideo.decodeQueryString(video_info)
