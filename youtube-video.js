@@ -1,1 +1,72 @@
-(function(){window.YoutubeVideo=function(e,t){return $.ajax({url:"https://www.youtube.com/get_video_info?video_id="+e,dataType:"text"}).done(function(e){var o;return"fail"===(o=YoutubeVideo.decodeQueryString(e)).status?t(o):(o.sources=YoutubeVideo.decodeStreamMap(o.url_encoded_fmt_stream_map),o.getSource=function(e,t){var o,u,r,i,n;for(u in r=null,o=null,n=this.sources)i=n[u],console.log(i),i.type.match(e)&&(i.quality.match(t)?o=i:r=i);return o||r},o.forEachSource=function(e){var t,o;for(t in null,null,o=this.sources)e(o[t])},t(o))})},window.YoutubeVideo.decodeQueryString=function(e){var t,o,u,r,i,n,l;for(r={},n=0,l=(u=e.split("&")).length;n<l;n++)o=u[n],t=decodeURIComponent(o.split("=")[0]),i=decodeURIComponent(o.split("=")[1]||""),r[t]=i;return r},window.YoutubeVideo.decodeStreamMap=function(e){var t,o,u,r,i,n,l,d;for(o={},n=0,l=(d=e.split(",")).length;n<l;n++)i=d[n],r=(u=YoutubeVideo.decodeQueryString(i)).type.split(";")[0],t=u.quality.split(",")[0],u.original_url=u.url,u.url=u.url+"&signature="+u.sig,o[r+" "+t]=u;return o}}).call(this);
+
+(function() {
+  window.YoutubeVideo = function(id, callback) {
+    return $.ajax({
+      url: "https://cors-anywhere.herokuapp.com/https://www.youtube.com/get_video_info?video_id=" + id,
+      dataType: "text"
+    }).done(function(video_info) {
+      var video;
+      video = YoutubeVideo.decodeQueryString(video_info);
+      if (video.status === "fail") {
+        return callback(video);
+      }
+      video.sources = YoutubeVideo.decodeStreamMap(video.url_encoded_fmt_stream_map);
+      video.getSource = function(type, quality) {
+        var exact, key, lowest, source, _ref;
+        lowest = null;
+        exact = null;
+        _ref = this.sources;
+        for (key in _ref) {
+          source = _ref[key];
+          console.log(source);
+          if (source.type.match(type)) {
+            if (source.quality.match(quality)) {
+              exact = source;
+            } else {
+              lowest = source;
+            }
+          }
+        }
+        return exact || lowest;
+      };
+      video.forEachSource = function(callback) {
+        var exact, key, lowest, source, _ref;
+        lowest = null;
+        exact = null;
+        _ref = this.sources;
+        for (key in _ref) {
+          source = _ref[key];
+          callback(source);
+        }
+      };
+      return callback(video);
+    });
+  };
+  window.YoutubeVideo.decodeQueryString = function(queryString) {
+    var key, keyValPair, keyValPairs, r, val, _i, _len;
+    r = {};
+    keyValPairs = queryString.split("&");
+    for (_i = 0, _len = keyValPairs.length; _i < _len; _i++) {
+      keyValPair = keyValPairs[_i];
+      key = decodeURIComponent(keyValPair.split("=")[0]);
+      val = decodeURIComponent(keyValPair.split("=")[1] || "");
+      r[key] = val;
+    }
+    return r;
+  };
+  window.YoutubeVideo.decodeStreamMap = function(url_encoded_fmt_stream_map) {
+    var quality, sources, stream, type, urlEncodedStream, _i, _len, _ref;
+    sources = {};
+    _ref = url_encoded_fmt_stream_map.split(",");
+    for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+      urlEncodedStream = _ref[_i];
+      stream = YoutubeVideo.decodeQueryString(urlEncodedStream);
+      type = stream.type.split(";")[0];
+      quality = stream.quality.split(",")[0];
+      stream.original_url = stream.url;
+      stream.url = "" + stream.url + "&signature=" + stream.sig;
+      sources["" + type + " " + quality] = stream;
+    }
+    return sources;
+  };
+}).call(this);
