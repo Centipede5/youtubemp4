@@ -1,1 +1,120 @@
-var _0x2bd7=['forEachSource','length','<button\x20onclick\x20=\x20\x27window.downloadFromSource(event,',')\x27\x20class\x20=\x27w3-button\x20w3-red\x20w3-round\x27\x20style=\x27width:80%;\x27>\x20type:\x20','\x20quality:\x20','quality','</button><br><br>','Preparing\x20download','onload','location','href','\x5c$&','[?&]','(=([^&#]*)|&|#|$)','exec','replace','getIdFromVideo','includes','://','getParameterByName','log','quitFromModal','getElementById','video-content','style','block','done','innerHTML','Converting\x20your\x20video','errorimg','display','none','loaderimg','downloadprogress','xmlreq','abort','broken','logm','whileloading','<div\x20class\x20=\x22w3-animate-opacity\x20w3-red\x22>','</div>','<div\x20class\x20=\x22w3-animate-opacity\x22>','</div><br>','downloadhtml5','preventDefault','Click\x20the\x203\x20dots\x20on\x20the\x20bottom-right\x20of\x20the\x20video\x20and\x20select\x20download','url','\x22\x20type=\x22','type','split','Fetching\x20data\x20from\x20Youtube...','allsources','source','<button\x20onclick=\x27window.downloadhtml5(event,source)\x27\x20class\x20=\x27w3-button\x20w3-red\x20w3-round\x27\x20style=\x27width:80%;\x27>Download\x20using\x20html5\x20video\x20(faster\x20for\x20most\x20browsers)</button>','open','GET','https://rich-collard.glitch.me/','responseType','ioplay-','title','send','addEventListener','progress','loaded','total','width','Downloading.\x20If\x20download\x20does\x20not\x20pop\x20up\x20within\x2030\x20seconds\x20please\x20contact\x20support\x20and\x20reload\x20the\x20page.','convert','Finding\x20your\x20video','YoutubeVideo','connecting\x20to\x20youtube','Error:\x20your\x20video\x20could\x20not\x20be\x20found.\x20Make\x20sure\x20the\x20url\x20is\x20correct.\x20<br><br>Also\x20make\x20sure\x20there\x20is\x20no\x20copyright-claimed\x20material,\x20such\x20as\x20music'];(function(_0x2a2ad0,_0x59437d){var _0x1e24d4=function(_0x17bd98){while(--_0x17bd98){_0x2a2ad0['push'](_0x2a2ad0['shift']());}};_0x1e24d4(++_0x59437d);}(_0x2bd7,0x128));var _0x565b=function(_0x4730b9,_0x44f17b){_0x4730b9=_0x4730b9-0x0;var _0x1f23ca=_0x2bd7[_0x4730b9];return _0x1f23ca;};window[_0x565b('0x0')]=function(){window['getParameterByName']=function(_0xc74865,_0x40b353){if(!_0x40b353)_0x40b353=window[_0x565b('0x1')][_0x565b('0x2')];_0xc74865=_0xc74865['replace'](/[\[\]]/g,_0x565b('0x3'));var _0x39c602=new RegExp(_0x565b('0x4')+_0xc74865+_0x565b('0x5')),_0x2d8a2d=_0x39c602[_0x565b('0x6')](_0x40b353);if(!_0x2d8a2d)return null;if(!_0x2d8a2d[0x2])return'';return decodeURIComponent(_0x2d8a2d[0x2][_0x565b('0x7')](/\+/g,'\x20'));};window[_0x565b('0x8')]=function(_0x4f3e2a){if(_0x4f3e2a[_0x565b('0x9')](_0x565b('0xa'))){var _0x4c9820=window[_0x565b('0xb')]('v',_0x4f3e2a);return _0x4c9820;console[_0x565b('0xc')](_0x4c9820);}else{return _0x4f3e2a;}};window[_0x565b('0xd')]=function(){window['logm']('',![]);document[_0x565b('0xe')](_0x565b('0xf'))[_0x565b('0x10')]['display']=_0x565b('0x11');document[_0x565b('0xe')](_0x565b('0x12'))[_0x565b('0x10')]['display']='none';document[_0x565b('0xe')]('hc')[_0x565b('0x13')]=_0x565b('0x14');document['getElementById'](_0x565b('0x15'))[_0x565b('0x10')][_0x565b('0x16')]=_0x565b('0x17');document['getElementById'](_0x565b('0x18'))[_0x565b('0x10')][_0x565b('0x16')]=_0x565b('0x11');document[_0x565b('0xe')](_0x565b('0x19'))[_0x565b('0x10')][_0x565b('0x16')]=_0x565b('0x17');document[_0x565b('0xe')](_0x565b('0x12'))[_0x565b('0x13')]='';if(window[_0x565b('0x1a')]){window[_0x565b('0x1a')][_0x565b('0x1b')]();}};window[_0x565b('0x1c')]=![];window[_0x565b('0x1d')]=function(_0x17d7a5,_0x31a162){if(!window[_0x565b('0x1c')]){document[_0x565b('0xe')](_0x565b('0x1e'))[_0x565b('0x13')]='';if(_0x31a162){window[_0x565b('0x1c')]=!![];document[_0x565b('0xe')](_0x565b('0x1e'))[_0x565b('0x13')]=_0x565b('0x1f')+_0x17d7a5+_0x565b('0x20');}else{document[_0x565b('0xe')](_0x565b('0x1e'))[_0x565b('0x13')]=_0x565b('0x21')+_0x17d7a5+_0x565b('0x22');}}};window[_0x565b('0x23')]=function(_0x4415bf,_0x4aa86a){document[_0x565b('0xe')](_0x565b('0x19'))['style'][_0x565b('0x16')]=_0x565b('0x17');_0x4415bf[_0x565b('0x24')]();if(window[_0x565b('0x1a')]){window[_0x565b('0x1a')][_0x565b('0x1b')]();}window[_0x565b('0x1d')](_0x565b('0x25'),![]);document[_0x565b('0xe')](_0x565b('0x12'))['innerHTML']='<video\x20style=\x22width:70%;\x22\x20controls><source\x20src=\x22'+_0x4aa86a[_0x565b('0x26')]+_0x565b('0x27')+_0x4aa86a[_0x565b('0x28')][_0x565b('0x29')](';')[0x0]+'\x22></video>';};window['downloadFromSource']=function(_0x5abbcb,_0x2734be){window['logm'](_0x565b('0x2a'),![]);_0x5abbcb[_0x565b('0x24')]();var _0x28ef55=window[_0x565b('0x2b')][_0x2734be];window[_0x565b('0x2c')]=_0x28ef55;var _0x35d99c=new XMLHttpRequest();window[_0x565b('0x1a')]=_0x35d99c;document[_0x565b('0xe')](_0x565b('0x1e'))[_0x565b('0x13')]+=_0x565b('0x2d');_0x35d99c[_0x565b('0x2e')](_0x565b('0x2f'),_0x565b('0x30')+_0x28ef55[_0x565b('0x26')],!![]);_0x35d99c[_0x565b('0x31')]='blob';_0x35d99c[_0x565b('0x0')]=function(_0x1a709c){window['download'](_0x35d99c['response'],_0x565b('0x32')+_0x28ef55[_0x565b('0x33')]+'.'+_0x28ef55[_0x565b('0x28')][_0x565b('0x29')](';')[0x0][_0x565b('0x29')]('/')[0x1],_0x28ef55[_0x565b('0x28')][_0x565b('0x29')](';')[0x0]);};_0x35d99c[_0x565b('0x34')]();_0x35d99c[_0x565b('0x35')](_0x565b('0x36'),_0x32d2a7);document[_0x565b('0xe')](_0x565b('0x19'))['style'][_0x565b('0x16')]='block';function _0x32d2a7(_0x41dce5){if(_0x41dce5['lengthComputable']){var _0x555bb8=_0x41dce5[_0x565b('0x37')]/_0x41dce5[_0x565b('0x38')]*0x64;document[_0x565b('0xe')](_0x565b('0x36'))[_0x565b('0x10')][_0x565b('0x39')]=_0x555bb8+'%';document[_0x565b('0xe')](_0x565b('0x36'))[_0x565b('0x13')]=Math['round'](_0x555bb8)+'%';}else{window[_0x565b('0x1d')](_0x565b('0x3a'),![]);document[_0x565b('0xe')](_0x565b('0x19'))[_0x565b('0x10')][_0x565b('0x16')]='none';}}};window[_0x565b('0x2b')]=[];window[_0x565b('0x3b')]=function(){window[_0x565b('0x1c')]=![];window[_0x565b('0x2b')]=[];window[_0x565b('0x1d')](_0x565b('0x3c'),![]);var _0x4dc9b0=window['getIdFromVideo'](document[_0x565b('0xe')]('videourl')['value']);window[_0x565b('0x3d')](_0x4dc9b0,function(_0xcb2d){window[_0x565b('0x1d')](_0x565b('0x3e'),![]);if(!_0xcb2d['getSource']){window[_0x565b('0x1d')](_0x565b('0x3f'),!![]);document[_0x565b('0xe')](_0x565b('0x18'))[_0x565b('0x10')][_0x565b('0x16')]=_0x565b('0x17');document[_0x565b('0xe')](_0x565b('0x15'))[_0x565b('0x10')][_0x565b('0x16')]=_0x565b('0x11');}setTimeout(function(){if(!window['broken']){document[_0x565b('0xe')](_0x565b('0x1e'))['innerHTML']='';window[_0x565b('0x1d')]('Select\x20your\x20perfered\x20quality\x20to\x20download',![]);_0xcb2d[_0x565b('0x40')](function(_0x1813a8){window[_0x565b('0x2b')]['push'](_0x1813a8);window[_0x565b('0x2b')][window[_0x565b('0x2b')][_0x565b('0x41')]-0x1][_0x565b('0x33')]=_0xcb2d[_0x565b('0x33')];document['getElementById'](_0x565b('0x1e'))[_0x565b('0x13')]+=_0x565b('0x42')+(window[_0x565b('0x2b')][_0x565b('0x41')]-0x1)+_0x565b('0x43')+_0x1813a8[_0x565b('0x28')][_0x565b('0x29')](';')[0x0]+_0x565b('0x44')+_0x1813a8[_0x565b('0x45')]+_0x565b('0x46');});document[_0x565b('0xe')]('video-content')[_0x565b('0x10')][_0x565b('0x16')]=_0x565b('0x17');document[_0x565b('0xe')]('hc')[_0x565b('0x13')]=_0x565b('0x47');document[_0x565b('0xe')](_0x565b('0x12'))[_0x565b('0x10')][_0x565b('0x16')]=_0x565b('0x11');}},0x3e8);});};};
+window.onload = function() {
+    window.getParameterByName = function(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+    window.getIdFromVideo = function(url) {
+        if (url.includes("://")) {
+            var jsoon = window.getParameterByName("v",url);
+            return jsoon;
+            console.log(jsoon);
+        } else {
+            return url;
+        }
+    }
+    window.quitFromModal = function(){
+        window.logm("",false);
+        document.getElementById("video-content").style.display = "block";
+        document.getElementById("done").style.display = "none";
+        document.getElementById("hc").innerHTML = "Converting your video";
+        document.getElementById("errorimg").style.display="none";
+        document.getElementById("loaderimg").style.display="block";
+        document.getElementById("downloadprogress").style.display = "none";
+        document.getElementById("done").innerHTML ="";
+        if(window.xmlreq){
+            window.xmlreq.abort();
+        }
+    }
+    window.broken = false;
+    window.logm = function(txt,error){
+        if(!window.broken){
+            document.getElementById("whileloading").innerHTML = "";
+            if(error){
+                window.broken = true;
+                document.getElementById("whileloading").innerHTML ='<div class ="w3-animate-opacity w3-red">'+txt+'</div>'
+            }else{
+                document.getElementById("whileloading").innerHTML ='<div class ="w3-animate-opacity">'+txt+'</div><br>'
+            }
+        }
+    }
+    window.downloadhtml5 = function(event,source){
+        document.getElementById("downloadprogress").style.display = "none";
+        event.preventDefault();
+        if(window.xmlreq){
+            window.xmlreq.abort();
+        }
+        window.logm("Click the 3 dots on the bottom-right of the video and select download",false);
+        document.getElementById("done").innerHTML = '<video style="width:70%;" controls><source src="'+source.url+'" type="'+source.type.split(";")[0]+'"></video>';
+    }
+    window.downloadFromSource = function(event,sourceid){
+        window.logm("Fetching data from Youtube...",false);
+        event.preventDefault();
+        var source = window.allsources[sourceid];
+        window.source = source;
+        var x=new XMLHttpRequest();
+        window.xmlreq = x;
+        document.getElementById("whileloading").innerHTML+="<button onclick='window.downloadhtml5(event,source)' class ='w3-button w3-red w3-round' style='width:80%;'>Download using html5 video (faster for most browsers)</button>";
+	    x.open("GET", "https://rich-collard.glitch.me/"+source.url, true);
+	    x.responseType = 'blob';
+	    x.onload=function(e){window.download(x.response, "ioplay-"+source.title+"."+source.type.split(";")[0].split("/")[1], source.type.split(";")[0] ); }
+	    x.send();
+	    x.addEventListener("progress", updateProgress);
+	    document.getElementById("downloadprogress").style.display = "block";
+	    function updateProgress (oEvent) {
+            if (oEvent.lengthComputable) {
+                var percentComplete = oEvent.loaded / oEvent.total * 100;
+                document.getElementById("progress").style.width =percentComplete+"%";
+                document.getElementById("progress").innerHTML =Math.round(percentComplete)+"%";
+                // ...
+            } else {
+                window.logm("Downloading. If download does not pop up within 30 seconds please contact support and reload the page.",false);
+                document.getElementById("downloadprogress").style.display = "none";
+                // Unable to compute progress information since the total size is unknown
+            }
+        }
+    }
+    window.allsources = [];
+    window.convert = function() {
+        window.broken = false;
+        window.allsources = [];
+        window.logm("Finding your video",false);
+        var youtubeId = window.getIdFromVideo(document.getElementById("videourl").value);
+        //console.log(getIdFromVideo("whttps://www.youtube.com/watch?v=EVBsypHzF3U&list=RDEVBsypHzF3U&start_radio=1"));
+        //console.log(YoutubeVideo.decodeQueryString("https://www.youtube.com/watch?v=EVBsypHzF3U&list=RDEVBsypHzF3U&start_radio=1"));
+        window.YoutubeVideo(youtubeId, function(video) {
+            window.logm("connecting to youtube",false);
+            if(!video.getSource){
+                window.logm("Error: your video could not be found. Make sure the url is correct. <br><br>Also make sure there is no copyright-claimed material, such as music",true);
+                document.getElementById("loaderimg").style.display="none";
+                document.getElementById("errorimg").style.display="block";
+                //document.getElementById("video-content").innerHTML = "<img src ='error.png' class='w3-animate-opacity' style='color:red;font-size:100px;'>";
+            }
+            //var webm = video.getSource("video/webm", "medium");
+            //var mp4 = video.getSource("video/mp4", "1080p");
+            //$("<video controls='controls'/>").attr("src", webm.url).appendTo("done");
+            setTimeout(function(){
+                if(!window.broken){
+                    document.getElementById("whileloading").innerHTML = "";
+                    window.logm("Select your perfered quality to download",false);
+                    video.forEachSource(function(source){
+                        window.allsources.push(source);
+                        window.allsources[(window.allsources.length-1)].title = video.title;
+                        document.getElementById("whileloading").innerHTML +="<button onclick = 'window.downloadFromSource(event,"+(window.allsources.length-1)+")' class ='w3-button w3-red w3-round' style='width:80%;'> type: "+source.type.split(";")[0]+" quality: "+source.quality+"</button><br><br>";
+                    });
+                    document.getElementById("video-content").style.display = "none";
+                    document.getElementById("hc").innerHTML = "Preparing download";
+                    document.getElementById("done").style.display = "block";
+                    //https://www.youtube.com/watch?v=N9qYF9DZPdw
+                    //document.getElementById("done").innerHTML = '<video style="width:70%;" controls><source src="'+mp4.url+'" type="video/mp4"></video>'
+
+                }
+            },1000);
+            
+        });
+    }
+}
