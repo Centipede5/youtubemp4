@@ -59,7 +59,7 @@ window.onload = function() {
         var x=new XMLHttpRequest();
         window.xmlreq = x;
         document.getElementById("whileloading").innerHTML+="<button onclick='window.downloadhtml5(event,source)' class ='w3-button w3-red w3-round' style='width:80%;'>Download using html5 video (faster for most browsers)</button>";
-	    x.open("GET", "https://rich-collard.glitch.me/"+source.url, true);
+	    x.open("GET", ""+source.url, true);
 	    x.responseType = 'blob';
 	    x.onload=function(e){window.download(x.response, "ioplay-"+source.title+"."+source.type.split(";")[0].split("/")[1], source.type.split(";")[0] ); }
 	    x.send();
