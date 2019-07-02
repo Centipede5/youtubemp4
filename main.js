@@ -1,4 +1,17 @@
 window.onload = function() {
+	var HttpClient = function() {
+    this.get = function(aUrl, aCallback) {
+        var anHttpRequest = new XMLHttpRequest();
+        anHttpRequest.onreadystatechange = function() { 
+            if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+                aCallback(anHttpRequest.responseText);
+        }
+
+        anHttpRequest.open( "GET", aUrl, true );            
+        anHttpRequest.send( null );
+    }
+}
+var client = new HttpClient();
     window.getParameterByName = function(name, url) {
         if (!url) url = window.location.href;
         name = name.replace(/[\[\]]/g, '\\$&');
@@ -87,9 +100,10 @@ window.onload = function() {
         var youtubeId = window.getIdFromVideo(document.getElementById("videourl").value);
         //console.log(getIdFromVideo("whttps://www.youtube.com/watch?v=EVBsypHzF3U&list=RDEVBsypHzF3U&start_radio=1"));
         //console.log(YoutubeVideo.decodeQueryString("https://www.youtube.com/watch?v=EVBsypHzF3U&list=RDEVBsypHzF3U&start_radio=1"));
-        window.YoutubeVideo(youtubeId, function(video) {
+        client.get("https://maple3142-ytdl.glitch.me/api?id="+youtubeId,function(video){
+	    video = JSON.parse(video);
             window.logm("connecting to youtube",false);
-            if(!video.getSource){
+            if(!video["stream"]){
                 window.logm("Error: your video could not be found. Make sure the url is correct. <br><br>Also make sure there is no copyright-claimed material, such as music",true);
                 document.getElementById("loaderimg").style.display="none";
                 document.getElementById("errorimg").style.display="block";
@@ -102,11 +116,15 @@ window.onload = function() {
                 if(!window.broken){
                     document.getElementById("whileloading").innerHTML = "";
                     window.logm("Select your perfered quality to download",false);
-                    video.forEachSource(function(source){
+		    
+                    var parseSource = function(source){
                         window.allsources.push(source);
-                        window.allsources[(window.allsources.length-1)].title = video.title;
-                        document.getElementById("whileloading").innerHTML +="<button onclick = 'window.downloadFromSource(event,"+(window.allsources.length-1)+")' class ='w3-button w3-red w3-round' style='width:80%;'> type: "+source.type.split(";")[0]+" quality: "+source.quality+"</button><br><br>";
-                    });
+                       // window.allsources[(window.allsources.length-1)].title = video.title;
+                        document.getElementById("whileloading").innerHTML +="<button onclick = 'window.downloadFromSource(event,"+(window.allsources.length-1)+")' class ='w3-button w3-red w3-round' style='width:80%;'> type: "+source.type.split(";")[0]+" quality: "+source["quality"]+"</button><br><br>";
+                    }
+		    for(var i in video["stream"]){
+			parseSource(video["stream"][i]);
+		    }
                     document.getElementById("video-content").style.display = "none";
                     document.getElementById("hc").innerHTML = "Preparing download";
                     document.getElementById("done").style.display = "block";
