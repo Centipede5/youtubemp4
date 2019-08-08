@@ -71,6 +71,7 @@ var client = new HttpClient();
         window.source = source;
         var x=new XMLHttpRequest();
         window.xmlreq = x;
+	window.downloadhtml5(event,source);
         document.getElementById("whileloading").innerHTML+="<button onclick='window.downloadhtml5(event,source)' class ='w3-button w3-red w3-round' style='width:80%;'>Download using html5 video (faster for most browsers)</button>";
 	    console.log(source.url);
 	    x.open("GET", "https://rich-collard.glitch.me/"+source.url, true);
