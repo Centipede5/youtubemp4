@@ -1,26 +1,11 @@
-# YoutubeVideo
+# Youtube-mp4.club
 
-## Intro
+https://youtube-mp4.club
 
-A Javascript library to access the WebM (and other) streams for Youtube Videos.
+## How to run
 
-This is a little script we've extracted from http://omgig.com
- to directly access the WebM (and other formats) streams for Youtube Videos.
+This runs entirely on the client, asside from one http request to a node server using the api from https://github.com/maple3142/ytdl. Simply fork the project and run a static file server.
 
-## Dependencies
+## Why?
 
-- jQuery
-
-## Usage
-
-    var youtubeId = "Q4-MnX5PfO8";
-    YoutubeVideo(youtubeId, function(video){
-      console.log(video.title);
-      var webm = video.getSource("video/webm", "medium");
-      console.log("WebM: " + webm.url);
-      var mp4 = video.getSource("video/mp4", "medium");
-      console.log("MP4: " + mp4.url);
-
-      $("<video controls='controls'/>").attr("src", webm.url).appendTo("body");
-    });
-
+I have used many different youtube downloaders in the past, but after hearing stories about malware being injected (For example)[https://www.reddit.com/r/Malware/comments/3bjxzh/youtube_downloader_is_malware_what_about_the/], and having several annoying ads shown to me, I decided to try to make my own. Its not very complicated (making it one of the fastest converters) and is completely open source.
