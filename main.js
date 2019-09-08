@@ -79,7 +79,7 @@ var client = new HttpClient();
 	    x.open("GET", "https://rich-collard.glitch.me/"+source.url, true);
 	    x.responseType = 'blob';
 	    //x.onload=function(e){window.download(x.response, "ioplay-"+source.title+"."+source.type.split(";")[0].split("/")[1], source.type.split(";")[0] ); }
-	    x.send();
+	    //x.send();
 	    x.addEventListener("progress", updateProgress);
 	    document.getElementById("downloadprogress").style.display = "block";
 	    function updateProgress (oEvent) {
