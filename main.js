@@ -103,7 +103,7 @@ var client = new HttpClient();
         var youtubeId = window.getIdFromVideo(document.getElementById("videourl").value);
         //console.log(getIdFromVideo("whttps://www.youtube.com/watch?v=EVBsypHzF3U&list=RDEVBsypHzF3U&start_radio=1"));
         //console.log(YoutubeVideo.decodeQueryString("https://www.youtube.com/watch?v=EVBsypHzF3U&list=RDEVBsypHzF3U&start_radio=1"));
-        client.get("https://lucky-samba.glitch.me/api?id="+youtubeId,function(video){
+        client.get("https://maple3142-ytdl-demo.glitch.me/api?id="+youtubeId,function(video){
 	    video = JSON.parse(video);
             window.logm("connecting to youtube",false);
             if(!video["stream"]){
