@@ -61,6 +61,7 @@ var client = new HttpClient();
         if(window.xmlreq){
             window.xmlreq.abort();
         }
+	    console.log(source);
         window.logm("Click the 3 dots on the bottom-right of the video and select download",false);
         document.getElementById("done").innerHTML = '<video style="width:70%;" controls><source src="'+source.url+'" type="'+source.type.split(";")[0]+'"></video>';
     }
