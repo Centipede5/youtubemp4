@@ -63,7 +63,7 @@ var client = new HttpClient();
         }
 	    console.log(source);
         window.logm("Click the 3 dots on the bottom-right of the video and select download",false);
-        document.getElementById("done").innerHTML = '<video style="width:70%;" controls><source src="'+source.url+'" type="'+source.type.split(";")[0]+'"></video>';
+        document.getElementById("done").innerHTML = '<video style="width:70%;" controls><source src="'+source.url+'" type="'+source.mimeType.split(";")[0]+'"></video>';
     }
     window.downloadFromSource = function(event,sourceid){
         window.logm("Fetching data from Youtube...",false);
@@ -122,7 +122,7 @@ var client = new HttpClient();
                     var parseSource = function(source){
                         window.allsources.push(source);
                        // window.allsources[(window.allsources.length-1)].title = video.title;
-                        document.getElementById("whileloading").innerHTML +="<button onclick = 'window.downloadFromSource(event,"+(window.allsources.length-1)+")' class ='w3-button w3-red w3-round' style='width:80%;'> type: "+source.type.split(";")[0]+" quality: "+source["quality"]+"</button><br><br>";
+                        document.getElementById("whileloading").innerHTML +="<button onclick = 'window.downloadFromSource(event,"+(window.allsources.length-1)+")' class ='w3-button w3-red w3-round' style='width:80%;'> type: "+source.mimeType.split(";")[0]+" quality: "+source["quality"]+"</button><br><br>";
                     }
 		    for(var i in video["stream"]){
 			parseSource(video["stream"][i]);
