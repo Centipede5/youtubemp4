@@ -22,11 +22,13 @@ var client = new HttpClient();
         return decodeURIComponent(results[2].replace(/\+/g, ' '));
     }
     window.getIdFromVideo = function(url) {
-        if (url.includes("://")) {
+        if (url.includes("://")&&url.includes("youtube")) {
             var jsoon = window.getParameterByName("v",url);
             return jsoon;
             console.log(jsoon);
-        } else {
+        } else if(url.includes("youtu.be")){
+	    return url.replace("https://youtu.be/","");
+	}else {
             return url;
         }
     }
