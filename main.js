@@ -97,6 +97,10 @@ var client = new HttpClient();
         }
     }
     window.allsources = [];
+    if(window.getParameterByName("v",document.location.href)){
+	document.getElementById("videourl").value = "youtu.be/"+window.getParameterByName("v",document.location.href);
+    	window.convert();
+    }
     window.convert = function() {
         window.broken = false;
         window.allsources = [];
