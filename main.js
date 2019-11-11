@@ -142,6 +142,7 @@ var client = new HttpClient();
         });
     }
     if(window.getParameterByName("v",document.location.href)){
+	document.getElementById('id01').style.display='block';
 	document.getElementById("videourl").value = "youtu.be/"+window.getParameterByName("v",document.location.href);
     	window.convert();
     }
