@@ -105,7 +105,10 @@ var client = new HttpClient();
         var youtubeId = window.getIdFromVideo(document.getElementById("videourl").value);
         //console.log(getIdFromVideo("whttps://www.youtube.com/watch?v=EVBsypHzF3U&list=RDEVBsypHzF3U&start_radio=1"));
         //console.log(YoutubeVideo.decodeQueryString("https://www.youtube.com/watch?v=EVBsypHzF3U&list=RDEVBsypHzF3U&start_radio=1"));
-        client.get("https://maple3142-ytdl-demo.glitch.me/api?id="+youtubeId,function(video){
+        var servers = ["https://maple3142-ytdl-demo.glitch.me/api?id=","https://maple3142-ytdl-1.glitch.me/api?id=","https://maple3142-ytdl-2.glitch.me/api?id=","https://maple3142-ytdl-3.glitch.me/api?id="]
+	var hour = new Date().getUTCHours()||4;
+	var server = servers[Math.floor((hour/25)*servers.length)];
+	client.get(server+""+youtubeId,function(video){
 	    video = JSON.parse(video);
             window.logm("connecting to youtube",false);
             if(!video["stream"]){
