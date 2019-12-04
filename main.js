@@ -64,7 +64,15 @@ var client = new HttpClient();
             window.xmlreq.abort();
         }
 	    console.log(source);
-        window.logm("Click the 3 dots on the bottom-right of the video and select download",false);
+
+  	var mac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
+
+	if(mac){
+		window.logm("Right-click on the video and select download",false);
+	}else{
+		window.logm("Click the 3 dots on the bottom-right of the video and select download",false);
+	}
+        	
         document.getElementById("done").innerHTML = '<video style="width:70%;" controls><source src="'+source.url+'" type="'+source.mimeType.split(";")[0]+'"></video>';
     }
     window.downloadFromSource = function(event,sourceid){
