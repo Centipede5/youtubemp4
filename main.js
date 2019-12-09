@@ -118,6 +118,11 @@ var client = new HttpClient();
 	var server = servers[Math.floor(Math.random()*servers.length)];
 	client.get(server+""+youtubeId,function(video){
 	    video = JSON.parse(video);
+	    if(video.name&&video.name=="HTTPError"){
+	        console.log(server+" is down")
+	        window.convert();
+	        return;
+	    }
             window.logm("connecting to youtube",false);
             if(!video["stream"]){
                 window.logm("Error: your video could not be found. Make sure the url is correct. <br><br>Also make sure there is no copyright-claimed material, such as music",true);
