@@ -141,6 +141,7 @@ var client = new HttpClient();
 		    for(var i in video["stream"]){
 			parseSource(video["stream"][i]);
 		    }
+		    document.getElementById("whileloading").innerHTML +="<a href = 'https://ytdl-core-server.glitch.me/mp3?v="+youtubeId+"' class ='w3-button w3-purple w3-round' style='width:80%;'> type: audio/mp3 (beta)"+" quality: "+"126 kbps"+"</a><br><br>";
                     document.getElementById("video-content").style.display = "none";
                     document.getElementById("hc").innerHTML = "Preparing download";
                     document.getElementById("done").style.display = "block";
