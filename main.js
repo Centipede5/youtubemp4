@@ -1,4 +1,9 @@
 window.onload = function() {
+	window.addEventListener("keydown",function(e){
+	if(e.code=="Enter"&&document.getElementById('id01').style.display!="block"){
+		document.getElementById('id01').style.display='block';window.convert();
+    }
+});
 	var HttpClient = function() {
     this.get = function(aUrl, aCallback) {
         var anHttpRequest = new XMLHttpRequest();
